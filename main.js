@@ -4,14 +4,15 @@ addNewBook.addEventListener('click', addBookToLibrary);
 addNewBook.addEventListener('click', showBook);
 let myLibrary = [];
 
-function book (title, author, numberOfPages, readStatus){
+class book{
+    constructor(title, author, numberOfPages, readStatus){
         this.title = document.getElementById('book_title').value;
-        this.author = document.getElementById('book_author').value;
-        this.numberOfPages = document.getElementById('number_of_pages').value;
-        this.readStatus = document.getElementById('read_status').value;
-        return;
-};
-
+                this.author = document.getElementById('book_author').value;
+                this.numberOfPages = document.getElementById('number_of_pages').value;
+                this.readStatus = document.getElementById('read_status').value;
+                return;
+    }
+}
 function addBookToLibrary(){
     let newBook = new book();
     myLibrary.push(newBook);
